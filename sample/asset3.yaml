@@ -1,0 +1,30 @@
+apiVersion: katalog.fybrik.io/v1alpha1
+kind: Asset
+metadata:
+  name: asset3
+spec:
+  secretRef: 
+    name: asset3
+  details:
+    dataFormat: csv
+    connection:
+      name: s3
+      s3:
+        endpoint: "http://localstack.fybrik-notebook-sample.svc.cluster.local:4566"
+        bucket: "demo"
+        object_key: "file3.csv"
+  metadata:
+    name: Synthetic Financial Datasets For Fraud Detection
+    geography: theshire 
+    tags:
+      finance: true
+    columns:
+      - name: nameOrig
+        tags:
+          PII: true
+      - name: oldbalanceOrg
+        tags:
+          PII: true
+      - name: newbalanceOrig
+        tags:
+          PII: true

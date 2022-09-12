@@ -1,0 +1,30 @@
+# Copyright 2020 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
+apiVersion: app.fybrik.io/v1alpha1
+kind: FybrikModule
+metadata:
+  name: read
+  namespace: fybrik-system
+spec:
+  chart:
+    name: ghcr.io/mohammad-nassar10/read-file-module-chart:0.0.0
+  type: service
+  capabilities:
+    - capability: read
+      api:
+          connection:
+            name: http
+            http:
+              hostname: "{{ .Release.Name }}.{{ .Release.Namespace }}"
+              port: 8484
+              scheme: http
+      supportedInterfaces: 
+        - source:
+            protocol: s3
+            dataformat: pdf
+        - source:
+            protocol: s3
+            dataformat: json
+      actions:
+        - name: FilterFiles

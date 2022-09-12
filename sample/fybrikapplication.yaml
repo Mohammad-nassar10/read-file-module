@@ -1,0 +1,23 @@
+apiVersion: app.fybrik.io/v1alpha1
+kind: FybrikApplication
+metadata:
+  name: my-notebook
+  labels:
+    app: my-notebook
+spec:
+  selector:
+    workloadSelector:
+      matchLabels:
+        app: my-notebook
+  appInfo:
+    intent: Fraud Detection
+    role: manager
+  data:
+    - dataSetID: "fybrik-notebook-sample/asset1"
+      requirements:
+        interface: 
+          protocol: http
+    - dataSetID: "fybrik-notebook-sample/asset2"
+      requirements:
+        interface: 
+          protocol: http

@@ -1,0 +1,20 @@
+apiVersion: katalog.fybrik.io/v1alpha1
+kind: Asset
+metadata:
+  name: asset2
+spec:
+  secretRef: 
+    name: asset2
+  details:
+    dataFormat: json
+    connection:
+      name: s3
+      s3:
+        endpoint: "172.31.212.138:9000"
+        bucket: "iris"
+        object_key: "v0.metadata.json"
+  metadata:
+    name: Synthetic Financial Datasets For Fraud Detection
+    geography: theshire 
+    tags:
+      finance: false

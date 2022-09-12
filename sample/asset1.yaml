@@ -1,0 +1,30 @@
+apiVersion: katalog.fybrik.io/v1alpha1
+kind: Asset
+metadata:
+  name: asset1
+spec:
+  secretRef: 
+    name: asset1
+  details:
+    dataFormat: pdf
+    connection:
+      name: s3
+      s3:
+        endpoint: "172.31.212.138:9000"
+        bucket: "iris"
+        object_key: "Testpdffile.pdf"
+  metadata:
+    name: Synthetic Financial Datasets For Fraud Detection
+    geography: theshire 
+    tags:
+      finance: true
+    columns:
+      - name: nameOrig
+        tags:
+          PII: true
+      - name: oldbalanceOrg
+        tags:
+          PII: true
+      - name: newbalanceOrig
+        tags:
+          PII: true
