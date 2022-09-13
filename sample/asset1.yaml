@@ -18,13 +18,3 @@ spec:
     geography: theshire 
     tags:
       finance: true
-    columns:
-      - name: nameOrig
-        tags:
-          PII: true
-      - name: oldbalanceOrg
-        tags:
-          PII: true
-      - name: newbalanceOrig
-        tags:
-          PII: true
