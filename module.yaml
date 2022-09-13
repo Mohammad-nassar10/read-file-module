@@ -17,7 +17,7 @@ spec:
             name: http
             http:
               hostname: "{{ .Release.Name }}.{{ .Release.Namespace }}"
-              port: 8484
+              port: 80
               scheme: http
       supportedInterfaces: 
         - source:
