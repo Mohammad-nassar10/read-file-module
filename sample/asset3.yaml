@@ -10,9 +10,9 @@ spec:
     connection:
       name: s3
       s3:
-        endpoint: "http://localstack.fybrik-notebook-sample.svc.cluster.local:4566"
-        bucket: "demo"
-        object_key: "file3.csv"
+        endpoint: "172.31.212.138:9000"
+        bucket: "iris"
+        object_key: "v0.metadata.json"
   metadata:
     name: Synthetic Financial Datasets For Fraud Detection
     geography: theshire 

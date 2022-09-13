@@ -6,13 +6,13 @@ spec:
   secretRef: 
     name: asset1
   details:
-    dataFormat: pdf
+    dataFormat: json
     connection:
       name: s3
       s3:
-        endpoint: "172.31.212.138:9000"
-        bucket: "iris"
-        object_key: "Testpdffile.pdf"
+        endpoint: "localstack.fybrik-notebook-sample.svc.cluster.local:4566"
+        bucket: "demo"
+        object_key: "sample1.json"
   metadata:
     name: Synthetic Financial Datasets For Fraud Detection
     geography: theshire 
