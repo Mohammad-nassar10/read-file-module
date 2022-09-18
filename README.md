@@ -3,7 +3,7 @@
 # read-file-module
 
 ### Install Fybrik
-Fybrik Quick Start (v0.6), without the section of `Install modules`.
+Fybrik [Quick Start (v1.1)](https://fybrik.io/v1.1/get-started/quickstart/), without the section of `Install modules`.
 
 ### Create namespace
 ```bash
